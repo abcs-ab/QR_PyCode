@@ -19,7 +19,6 @@ The module generates QR Code from text file or stdin. The output image can be sa
   There's only input message `[-i]` and output file name `[-o]` required and we are good to go. All the remaining parameters will be set automatically, based on the message length and its type (number, UTF-8, ASCII, etc.). 
   ```bash
   $ python3 qr_code.py -i "Hello world" -o "stdin_sample.png"
-  
   ```
   
   ```bash
@@ -28,7 +27,6 @@ The module generates QR Code from text file or stdin. The output image can be sa
     [+] Error Correction Level: Q chosen.
     [+] Best mask has been applied: [2]. With 342.0 penalty
     QR saved at: /absolute/path/to/the/stdin_sample.png
-
   ```
 ![Hello world image.](samples/stdin_sample.png)
 
@@ -53,7 +51,6 @@ The module generates QR Code from text file or stdin. The output image can be sa
     
     ```bash
     AssertionError: Message too long (7716) for a given version capacity (104)
-
     ```
     When we pass incorrect values, another error will be raised.
     
@@ -71,7 +68,6 @@ The module generates QR Code from text file or stdin. The output image can be sa
     [+] QR version: 15 chosen.
     [+] Error Correction Level: Q chosen.
     [+] Best mask has been applied: [4]. With 3546.0 penalty
-
     ```
 ![Set version ec image.](samples/ver_ecl_sample.png)
 
@@ -80,19 +76,16 @@ The module generates QR Code from text file or stdin. The output image can be sa
   It's not recommended to set a mask value `[-m]` if you want to be sure that the best one is chosen. It will however speed up generating QR codes noticeably. Quiet zone value `[-z]` determines width of white space around QR code.
 
     ```bash
-        $ python3 qr_code.py -i "https://github.com/abcs-ab" -d -s 7 -v 8 -e 3 -m 3 -z 1
+      $ python3 qr_code.py -i "https://github.com/abcs-ab" -d -s 7 -v 8 -e 3 -m 3 -z 1
     ```
 
     ```bash
-        [+] Latin-1 encoding applied.
-        [+] QR version: 8 chosen.
-        [+] Error Correction Level: H chosen.
-
+      [+] Latin-1 encoding applied.
+      [+] QR version: 8 chosen.
+      [+] Error Correction Level: H chosen.
     ```
 
-
 ![Set mask qzone image.](samples/mask_qzone_sample.png)
-
 
   * #### Last but not least, the `[-h]` flag.
 
