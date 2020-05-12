@@ -75,15 +75,15 @@ The module generates QR Code from text file or stdin. The output image can be sa
   * #### Setting QR code mask and quiet zone values.
   It's not recommended to set a mask value `[-m]` if you want to be sure that the best one is chosen. It will however speed up generating QR codes noticeably. Quiet zone value `[-z]` determines width of white space around QR code.
 
-    ```bash
-      $ python3 qr_code.py -i "https://github.com/abcs-ab" -d -s 7 -v 8 -e 3 -m 3 -z 1
-    ```
+```bash
+  $ python3 qr_code.py -i "https://github.com/abcs-ab" -d -s 7 -v 8 -e 3 -m 3 -z 1
+```
 
-    ```bash
-      [+] Latin-1 encoding applied.
-      [+] QR version: 8 chosen.
-      [+] Error Correction Level: H chosen.
-    ```
+```bash
+  [+] Latin-1 encoding applied.
+  [+] QR version: 8 chosen.
+  [+] Error Correction Level: H chosen.
+```
 
 ![Set mask qzone image.](samples/mask_qzone_sample.png)
 
